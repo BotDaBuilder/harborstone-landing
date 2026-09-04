@@ -1,0 +1,308 @@
+/* --- BLACK & GOLD VIBES --- */
+:root {
+  --primary-color: #000000; /* True Black */
+  --accent-color: #D4AF37; /* Metallic Gold */
+  --text-main: #E0E0E0; /* Off-white for readability on black */
+  --text-muted: #A0A0A0;
+  --bg-dark: #121212; /* Deep charcoal for contrast sections */
+  --white: #FFFFFF;
+  --transition-speed: 0.3s;
+}
+
+/* --- RESET & TYPOGRAPHY --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--primary-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition-speed);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border: 2px solid var(--accent-color);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* --- HEADER & NAVIGATION --- */
+.site-header {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--white);
+}
+
+.logo-text strong {
+  color: var(--accent-color);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.main-nav a {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.main-nav a:hover, .main-nav a.active {
+  color: var(--accent-color);
+}
+
+/* --- IMPACT GRID --- */
+.impact-section {
+  padding: 80px 0;
+  background-color: var(--primary-color);
+}
+
+.section-subtitle {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--bg-dark);
+  padding: 40px 30px;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  transition: transform var(--transition-speed), border-color var(--transition-speed);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card h3 {
+  color: var(--white);
+}
+
+/* --- THE STANDOUT BONUS CARD --- */
+.card-highlight {
+  background: linear-gradient(145deg, #1a1a1a 0%, #000000 100%);
+  border: 2px solid var(--accent-color);
+  position: relative;
+}
+
+.card-highlight h3 {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-highlight h3 {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+  background-color: var(--bg-dark);
+  border-top: 2px solid var(--accent-color);
+  padding: 60px 0 20px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand h2 {
+  color: var(--accent-color);
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+.footer-contact p {
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* --- LOTTIE HERO LAYOUT FIX --- */
+.hero-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--white); /* FIX: Brings the white text back */
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2); 
+  padding: 80px 20px; 
+}
+
+.hero-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text-col {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-text-col h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero-text-col .lead {
+  color: var(--text-main);
+  margin-bottom: 30px;
+}
+
+.hero-text-col .hero-buttons {
+  justify-content: flex-start;
+  display: flex;
+  gap: 20px;
+}
+
+.hero-lottie-col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+lottie-player {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  /* THE SAUCE: This filter forces the Lottie colors into Harborstone Gold */
+  filter: invert(73%) sepia(35%) saturate(583%) hue-rotate(3deg) brightness(94%) contrast(88%) drop-shadow(0 10px 30px rgba(212, 175, 55, 0.2));
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .hero-split {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
+  .hero-text-col {
+    text-align: center;
+  }
+  
+  .hero-text-col .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-text-col h1 {
+    font-size: 2.5rem;
+  }
+}

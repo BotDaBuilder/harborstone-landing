@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Donate | Harborstone GO</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- LOTTIE PLAYER SCRIPT -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+
+  <!-- PREMIUM BLACK & GOLD NAVIGATION -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo-area">
+        <a href="index.html" class="logo-text">HARBORSTONE <strong>GO</strong></a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Our Impact</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-22866" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Donate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- LOTTIE SPLIT HERO SECTION -->
+  <section class="hero-section">
+    <div class="container hero-split">
+      
+      <!-- Copy Column -->
+      <div class="hero-text-col">
+        <span class="eyebrow">Join The Movement</span>
+        <h1>Get Involved.</h1>
+        <p class="lead">Whether you want to volunteer, partner with us, or invest in human potential, your engagement changes lives. Reach out to the squad today.</p>
+      </div>
+
+      <!-- Animation Column -->
+      <div class="hero-lottie-col">
+        <lottie-player 
+          src="https://assets1.lottiefiles.com/packages/lf20_7wwm6az7.json" 
+          background="transparent" 
+          speed="1" 
+          loop 
+          autoplay>
+        </lottie-player>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT FORM & DONATION SECTION -->
+  <section class="impact-section">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px; max-width: 1000px;">
+      
+      <!-- Left Column: Form -->
+      <div class="card" style="padding: 40px;">
+        <h2 style="margin-bottom: 10px;">Reach Out to the Squad</h2>
+        <p style="color: var(--text-muted); margin-bottom: 25px;">Drop us a line below. We are always looking for mentors and corporate partners.</p>
+        
+        <form id="contactForm" action="mailto:hello@harborstonego.org" method="POST" enctype="text/plain" style="display: flex; flex-direction: column; gap: 20px;">
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            <label for="name" style="font-weight: 600; color: var(--text-main);">Full Name</label>
+            <input type="text" id="name" name="name" required style="padding: 12px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 4px; background: rgba(0,0,0,0.5); color: var(--white); font-family: inherit;">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            <label for="email" style="font-weight: 600; color: var(--text-main);">Email Address</label>
+            <input type="email" id="email" name="email" required style="padding: 12px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 4px; background: rgba(0,0,0,0.5); color: var(--white); font-family: inherit;">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            <label for="interest" style="font-weight: 600; color: var(--text-main);">I am interested in:</label>
+            <select id="interest" name="interest" style="padding: 12px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 4px; background: rgba(0,0,0,0.5); color: var(--white); font-family: inherit;">
+              <option value="volunteering">Volunteering / Mentorship</option>
+              <option value="partnership">Corporate Partnership</option>
+              <option value="other">Other Inquiry</option>
+            </select>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            <label for="message" style="font-weight: 600; color: var(--text-main);">Message</label>
+            <textarea id="message" name="message" rows="5" required style="padding: 12px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 4px; background: rgba(0,0,0,0.5); color: var(--white); font-family: inherit; resize: vertical;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Right Column: Zeffy Donate CTA -->
+      <div class="card card-highlight" style="padding: 40px; display: flex; flex-direction: column; justify-content: center; text-align: center;">
+        <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Invest in Human Potential</h2>
+        <p style="color: var(--text-main); font-size: 1.1rem; margin-bottom: 30px;">Your contribution provides safe housing, meals, and critical training for youth in transition. Every dollar builds the foundation for their future.</p>
+        <a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-22866" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 1.2rem; padding: 15px 40px; display: inline-block;">Donate on Zeffy</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPLIANT FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h2>HARBORSTONE GO</h2>
+        <p>Empowering youth aging out of care and protecting our seniors.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Headquarters</h3>
+        <p>23686 Goodfellow Drive<br>Spring, TX 77373</p>
+        <p>EIN: 41-2486141</p>
+        <p>hello@harborstonego.org</p>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 Harborstone GO. A registered 501(c)(3) non-profit organization.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
